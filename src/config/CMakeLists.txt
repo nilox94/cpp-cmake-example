@@ -1,1 +1,1 @@
-add_library(config STATIC config.cpp config.hpp)
+add_library(config STATIC config.cc config.hpp)

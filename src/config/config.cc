@@ -6,7 +6,7 @@
 
 using json = nlohmann::json;
 
-bool Config::operator==(Config &other)
+bool Config::operator==(const Config &other) const
 {
   return name == other.name 
       && value == other.value
@@ -30,7 +30,7 @@ void Config::load(const std::string &filename)
 {
 		std::fstream fs;
 		json j;
-		fs.open("config.json", std::fstream::in);
+		fs.open(filename, std::fstream::in);
 		fs >> j;
 		name = j["name"];
 		value = j["value"];
