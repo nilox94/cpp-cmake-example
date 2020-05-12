@@ -3,7 +3,7 @@
 
 find_package(Catch2 REQUIRED)
 add_executable(tests main.cc test_factorial.cc test_config.cc)
-target_link_libraries(tests Catch2::Catch2 config)
+target_link_libraries(tests ${CONAN_LIBS} config)
 
 include(CTest)
 include(Catch)
