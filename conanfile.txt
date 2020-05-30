@@ -1,6 +1,0 @@
-[requires]
-nlohmann_json/3.7.0
-catch2/2.5.0@bincrafters/stable
-
-[generators]
-cmake

@@ -3,8 +3,10 @@ project(project)
 
 add_definitions("-std=c++11")
 
-include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-conan_basic_setup()
+if (EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake)
+  include(vcpkg/scripts/buildsystems/vcpkg.cmake)
+else()
+  message(WARNING "vcpkg not found: using system libraries")
+endif()
 
 add_subdirectory(src)
- 
