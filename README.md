@@ -18,7 +18,7 @@ PS> .\bootstrap-vcpkg.bat
 Linux:~/$ ./bootstrap-vcpkg.sh
 ```
 
-Then the projects libraries can be installed
+Then the project libraries can be installed
 ```
 PS> .\vcpkg install nlohmann-json Catch2 armadillo h5cpp
 Linux:~/$ ./vcpkg install nlohmann-json Catch2 armadillo h5cpp
