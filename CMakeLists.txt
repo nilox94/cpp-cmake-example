@@ -9,4 +9,5 @@ else()
   message(WARNING "vcpkg not found: using system libraries")
 endif()
 
+# add_subdirectory(thirdparty/h5cpp)
 add_subdirectory(src)
